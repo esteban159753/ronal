@@ -7,19 +7,25 @@ body{
     
     
 }
+.container-max{
+/*     max-width: 1024px;
+    margin: auto; */
+}
 
 .encabezado, .contenido, .contenido_izquierda, .pie_de_pagina{
     box-sizing: border-box;
 }
-.container{
+/* .container{
     margin: 0 20px;
-    max-width: 1024px;
+    max-width: 1024px; */
     /* background-color: #edeef7; */
 }
                      /* esto es el header */
 .wraper_header{
     position: sticky;
-    top:0
+    top:0;
+    z-index: 200;
+    
 }
 .encabezado{
     height: 100px;
@@ -88,11 +94,11 @@ li a{
 .portada .uno{
     width: 50%;
     float: left;
-    height: inherit;
+    height: 100%;
 }
 .portada .dos{
     width: 49.5%;
-    height: inherit;
+    height: 100%;
     float: right;
     margin-left: 0.5%;
 
@@ -154,14 +160,14 @@ li a{
      /* box-sizing: border-box; */
      height:190px;
      width: 330px;
-     background-color: wheat;
+     /* background-color: wheat; */
      border: 1px solid black;
 
  }
  .container-youtube{
      height:100%;
      width: 100%;
-     background-color: blue ;
+     /* background-color: blue ; */
      /* padding-top: 56.25%; */
      position: relative;
  }
@@ -174,6 +180,7 @@ li a{
     left: 0;
     height: 100%;
     width: 100%;
+    
 
 }
 .contenido_video img{
@@ -181,17 +188,22 @@ li a{
     height: inherit;
 
 }
-
-
-
-
-
-
-
-
-
-
-
+.contenido_video .video{
+    position: relative;
+    width: 30%;
+    /* height: auto; */
+}
+.contenido_video .titulo-lucha{
+    position:absolute;
+    z-index: 2;
+    left: 30px;
+    top: 150px;
+    color: rgb(12, 15, 9);
+    font-size: 30px;
+    font-weight: 700;
+    background-color: rgba(175, 172, 172, 0.63);
+    border-radius: 5px;
+}
 
 
 
@@ -203,9 +215,32 @@ li a{
     margin-top: 7.6px;
     margin-bottom: 7.6px;
 }
+
+                         /*   pie de pagina */
+
+
 .pie_de_pagina{
     margin-top: 7.6px;
     height: 200px;
     background-color: #1687a7;
     clear: both;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+form h2{
+    text-align: center;
+}
+
+ form .google{
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    display: flex;
+    justify-content:center;
+    align-items: center; 
 }
